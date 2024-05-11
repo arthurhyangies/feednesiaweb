@@ -1,0 +1,489 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Jaldi', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  
+
+  --body-color: #E4E9F7;
+  --nav-color: #20493c;
+  --side-nav: #010718;
+  --text-color: #FFF;
+  --search-bar: #F2F2F2;
+  --search-text: #010718;
+}
+
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: black;
+  color: var();
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.nav__menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: sticky;
+  height: 76px;
+  align-items: center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #20493c;
+  z-index: var(--z-fixed);
+  transition: .4s;
+  
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.me-1{
+  color: #20493c;
+}
+.text-decoration-none{
+  color: #20493c; 
+}
+.row.row-col-12.justify-content-center{
+  background-color: #d4d4d4;
+  color: #F2F2F2;
+  max-width: 100%;
+}
+main{
+  padding-top: 50px;
+}
+.warnnaaaa{
+  background-color: #d4d4d4;
+}
+.row.row-col-12.justify-content-center .col-6.left.mx-6.px-5.d-none.d-lg-block .text-decoration-none {
+  font-weight: bold;
+
+}
+.row.row-col-12.justify-content-center.d-none.d-lg-block .col-6.right.mx-6.px-5 .text-decoration-none {
+  font-weight: bolder;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 155px;
+  max-height: 29px;
+  margin: 6rem auto;
+}
+
+.label {
+  font-size: .625rem;
+  font-weight: 400;
+  
+  text-transform: uppercase;
+  letter-spacing: +1.3px;
+  margin-bottom: 1rem;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 25px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.63);
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+#searchQueryInput::placeholder {
+  color: rgba(133, 133, 133, 0.795);
+}
+
+
+#searchQuerySubmit {
+  width: 2.5rem;
+  height: 40px;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .searchBar.d-lg-inline-flex{
+    max-width: 3px;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 155px;
+    max-height: 29px;
+    margin: 6rem auto;
+  }
+  
+  .label {
+    font-size: .625rem;
+    font-weight: 400;
+    
+    text-transform: uppercase;
+    letter-spacing: +1.3px;
+    margin-bottom: 1rem;
+  }
+  
+  .searchBar {
+    width: 105px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    
+  }
+  
+  #searchQueryInput {
+    width: 100%;
+    height: 18px;
+    width: 100px;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.63);
+    border-radius: 1.625rem;
+    padding: 0 2.5rem 0 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+  }
+  
+  #searchQueryInput::placeholder {
+    color: rgba(133, 133, 133, 0.795);
+    font-size: 10px;
+    align-items: center;
+  }
+  
+  
+  #searchQuerySubmit {
+
+    padding-left: 30px;
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  #searchQuerySubmit:hover {
+    cursor: pointer;
+  }
+  .nav-link.text-dark.d-block.d-sm-none.mx-1{
+    align-content: center;
+  }
+  .header{
+    max-height: 50px;
+  }
+  .navbar-brand.col-md-12.d-flex.w-40.me-auto{
+    max-height: 38px;
+  }
+  .navbar-brand.col-md-12.d-flex.w-40.me-auto .text >h6{
+    max-height: 10px;
+    align-content: center;
+    font-size: 10px;
+  }
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+  
+    height: 4rem;
+    padding: 0 1rem;
+    display: grid;
+
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+  }
+  .col-lg-4.d-flex.mx-auto.justify-content-end div div li{
+    display: none;
+    max-height: 24px;
+  }
+  .nav__menu.show {
+    bottom: 0;
+  }
+  .nav__name {
+    color: #000;
+  
+    font-size: var(--normal-font-size);
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav__icon{
+    color: #000;
+  }
+}
+
+.nav__list, 
+.nav__link {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  text-transform: capitalize;
+  
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  font-weight: bold;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.text {
+  padding-left: 13px;
+  font-size: 100px;
+  color: #FFF;
+}
+.text .pengguna{
+  font-weight: bold;
+  color: #FFF;
+}
+.nav-link.text-dark{
+  max-height: max-content;
+  max-width: max-content;
+}
+
+.navbar-brand{
+  min-width: 150px;
+  max-width:150px;
+}
+
+.navbar-b{
+  min-width: 150px;
+  max-width: 150  ;
+}
+
+.nav__center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.nav__list {
+  column-gap: 5rem;
+  justify-content: space-around;
+  list-style: none;
+  align-content: center;
+}
+
+
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+.nav-item.mx-2{
+  max-width: 155px;
+}
+
+.nav.navbar-nav.ms-auto.w-100.justify-content-end.d-none.d-lg-inline-flex{
+  column-gap: 15px;
+
+  max-width: 360px;
+  max-height: 76px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: end;
+}
+
+
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+  position: relative;
+  color:#FFF;
+  transition: .3s;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__list {
+    justify-content: center;
+    column-gap: 3rem;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 7rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
+  }
+  .nav__img {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__name {
+    font-size: var(--normal-font-size);
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+  }
+
+  /* Minimalist design */
+  /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
